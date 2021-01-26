@@ -53,7 +53,7 @@ public class MessagingRedisApplication {
 		while (receiver.getCount() == 0) {
 
 			LOGGER.info("Sending message...");
-			template.convertAndSend("chat", "Hello from Redis!");
+			template.convertAndSend("chat", "Hello from Redis! ");
 			Thread.sleep(500L);
 		}
 
