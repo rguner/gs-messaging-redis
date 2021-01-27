@@ -17,6 +17,7 @@ public class MessagingRedisApplication {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MessagingRedisApplication.class);
 
+
 	@Bean
 	RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory,
 			MessageListenerAdapter listenerAdapter) {
@@ -24,6 +25,7 @@ public class MessagingRedisApplication {
 		RedisMessageListenerContainer container = new RedisMessageListenerContainer();
 		container.setConnectionFactory(connectionFactory);
 		container.addMessageListener(listenerAdapter, new PatternTopic("chat"));
+
 
 		return container;
 	}
