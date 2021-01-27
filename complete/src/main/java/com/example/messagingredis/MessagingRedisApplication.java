@@ -27,6 +27,7 @@ public class MessagingRedisApplication {
 		container.addMessageListener(listenerAdapter, new PatternTopic("chat"));
 
 
+
 		return container;
 	}
 
